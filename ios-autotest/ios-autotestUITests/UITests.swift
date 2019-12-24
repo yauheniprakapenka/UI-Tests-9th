@@ -10,6 +10,15 @@ import XCTest
 
 class UITests: UITestCase {
     
+    func testTapOnCoordinate() {
+        tapOnCoordinate(at: 41, and: 162)
+        XCTAssert(app.staticTexts["Кнопка 1 нажата"].exists)
+        tapOnCoordinate(at: 156, and: 168)
+        XCTAssert(app.staticTexts["Кнопка 2 нажата"].exists)
+        tapOnCoordinate(at: 260, and: 168)
+        XCTAssert(app.staticTexts["Кнопка 3 нажата"].exists)
+    }
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
