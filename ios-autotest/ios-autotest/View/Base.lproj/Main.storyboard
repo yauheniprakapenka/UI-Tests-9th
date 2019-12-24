@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ios_autotest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-ob-Ncb">
+                                <rect key="frame" x="40" y="141.5" width="295" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-nK-Wqq">
+                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="30"/>
+                                        <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Кнопка 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2f-fZ-dyT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-aL-YiD">
+                                        <rect key="frame" x="103.5" y="0.0" width="88" height="30"/>
+                                        <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.090204529464244843" green="0.79877620935440063" blue="0.076208092272281647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Кнопка 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3s-7Y-Qbc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-MZ-LUG">
+                                        <rect key="frame" x="207.5" y="0.0" width="87.5" height="30"/>
+                                        <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Кнопка 3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GyM-k2-idv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6j-ZG-sam">
+                                <rect key="frame" x="20" y="60" width="335" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e6j-ZG-sam" secondAttribute="trailing" constant="20" id="Dxq-YE-4Nw"/>
+                            <constraint firstItem="Wlk-ob-Ncb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="IPR-MM-2AF"/>
+                            <constraint firstItem="e6j-ZG-sam" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MJF-Kt-btL"/>
+                            <constraint firstItem="e6j-ZG-sam" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="RDX-m5-L83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wlk-ob-Ncb" secondAttribute="trailing" constant="40" id="eku-VP-53J"/>
+                            <constraint firstItem="Wlk-ob-Ncb" firstAttribute="top" secondItem="e6j-ZG-sam" secondAttribute="bottom" constant="60" id="lo7-a1-94w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttobThree" destination="6gG-MZ-LUG" id="gK5-x9-T9b"/>
+                        <outlet property="buttonOne" destination="VFx-nK-Wqq" id="eGZ-4M-73K"/>
+                        <outlet property="buttonTwo" destination="bvo-aL-YiD" id="0k9-lB-yhq"/>
+                        <outlet property="resultLabel" destination="e6j-ZG-sam" id="hzo-8h-Srg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
