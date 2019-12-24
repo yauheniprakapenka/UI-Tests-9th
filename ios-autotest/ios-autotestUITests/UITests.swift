@@ -12,11 +12,11 @@ class UITests: UITestCase {
     
     func testTapOnCoordinate() {
         tapOnCoordinate(at: 41, and: 102)
-        XCTAssert(app.staticTexts["Кнопка 1 нажата"].exists)
+        XCTAssertTrue(app.staticTexts["Кнопка 1 нажата"].exists)
         tapOnCoordinate(at: 144, and: 102)
-        XCTAssert(app.staticTexts["Кнопка 2 нажата"].exists)
+        XCTAssertTrue(app.staticTexts["Кнопка 2 нажата"].exists)
         tapOnCoordinate(at: 248, and: 102)
-        XCTAssert(app.staticTexts["Кнопка 3 нажата"].exists)
+        XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
     }
     
     func testGetNumberOfElementsMatchingIdentifier() {
@@ -27,7 +27,7 @@ class UITests: UITestCase {
     }
     
     func testCheckLabelWithArgument() {
-        XCTAssert(app.staticTexts["Идет UI тестирование! 🦠"].exists)
+        XCTAssertTrue(app.staticTexts["Идет UI тестирование! 🦠"].exists)
     }
 
     func testNotFitText() {
