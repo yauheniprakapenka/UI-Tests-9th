@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var withoutArgumentLabel: UILabel!
+    @IBOutlet weak var hiddenLabel: UILabel!
+    
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttobThree: UIButton!
@@ -35,6 +37,15 @@ class MainViewController: UIViewController {
         
         sender.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
     }
+    
+    @IBAction func showButtonTapped(_ sender: UIButton) {
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(showLabel), userInfo: nil, repeats: false)
+    }
+    
+    @objc func showLabel() {
+        hiddenLabel.alpha = 1
+    }
+    
 
 }
 

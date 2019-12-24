@@ -8,7 +8,8 @@
 
 /*
  
-Readme:
-1) Тесты оптимизированы для iPhone 8
+ Readme:
+ 1) Тесты оптимизированы для iPhone 8
+ 2) Перед тестами включить отображение клавиатуры: Запустить симулятор - Hardware - Keyboard - Toggle software keyboard
 
 */

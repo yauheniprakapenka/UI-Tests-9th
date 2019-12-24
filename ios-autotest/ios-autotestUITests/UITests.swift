@@ -11,11 +11,11 @@ import XCTest
 class UITests: UITestCase {
     
     func testTapOnCoordinate() {
-        tapOnCoordinate(at: 41, and: 162)
+        tapOnCoordinate(at: 41, and: 102)
         XCTAssert(app.staticTexts["Кнопка 1 нажата"].exists)
-        tapOnCoordinate(at: 156, and: 168)
+        tapOnCoordinate(at: 144, and: 102)
         XCTAssert(app.staticTexts["Кнопка 2 нажата"].exists)
-        tapOnCoordinate(at: 260, and: 168)
+        tapOnCoordinate(at: 248, and: 102)
         XCTAssert(app.staticTexts["Кнопка 3 нажата"].exists)
     }
     
@@ -32,5 +32,18 @@ class UITests: UITestCase {
 
     func testNotFitText() {
         XCTAssertTrue(app.staticTexts["Winnie-the-Pooh lived in a forest all by himself under the name of Sanders."].exists)
+    }
+    
+    func testWaitingForAnElementToAppear() {
+        app.buttons["Показать лейбл"].tap()
+        
+        let label = app.staticTexts["А вот и я"]
+        XCTAssertFalse(label.exists)
+        
+        let exists = NSPredicate(format: "exists == true")
+        expectation(for: exists, evaluatedWith: label, handler: nil)
+        
+        waitForExpectations(timeout: 4, handler: nil)
+        XCTAssertTrue(label.exists)
     }
 }

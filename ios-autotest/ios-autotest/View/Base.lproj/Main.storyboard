@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,77 +15,152 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-ob-Ncb">
-                                <rect key="frame" x="40" y="141.5" width="295" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-86-6S1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-nK-Wqq">
-                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="30"/>
-                                        <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
-                                        <state key="normal" title="Кнопка 1">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2f-fZ-dyT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-aL-YiD">
-                                        <rect key="frame" x="103.5" y="0.0" width="88" height="30"/>
-                                        <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
-                                        <color key="tintColor" red="0.090204529464244843" green="0.79877620935440063" blue="0.076208092272281647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Кнопка 2">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3s-7Y-Qbc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-MZ-LUG">
-                                        <rect key="frame" x="207.5" y="0.0" width="87.5" height="30"/>
-                                        <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="testTwoID"/>
-                                        <state key="normal" title="Кнопка 3">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GyM-k2-idv"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6j-ZG-sam">
+                                        <rect key="frame" x="20" y="40" width="335" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-ob-Ncb">
+                                        <rect key="frame" x="40" y="81.5" width="295" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-nK-Wqq">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="30"/>
+                                                <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
+                                                <state key="normal" title="Кнопка 1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2f-fZ-dyT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-aL-YiD">
+                                                <rect key="frame" x="103.5" y="0.0" width="88" height="30"/>
+                                                <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
+                                                <color key="tintColor" red="0.090204529464244843" green="0.79877620935440063" blue="0.076208092272281647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Кнопка 2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3s-7Y-Qbc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-MZ-LUG">
+                                                <rect key="frame" x="207.5" y="0.0" width="87.5" height="30"/>
+                                                <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="testTwoID"/>
+                                                <state key="normal" title="Кнопка 3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GyM-k2-idv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6j-ZG-sam">
-                                <rect key="frame" x="20" y="60" width="335" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сейчас не UI тестирование 🏀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-rf-oXQ">
-                                <rect key="frame" x="64" y="211.5" width="247" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnie-the-Pooh lived in a forest all by himself under the name of Sanders." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScD-hg-pBD">
-                                <rect key="frame" x="20" y="272" width="335" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.97660762071609497" green="0.97395700216293335" blue="0.92484897375106812" alpha="0.99957275390625" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Wlk-ob-Ncb" secondAttribute="trailing" constant="40" id="4Rk-b1-JHY"/>
+                                    <constraint firstItem="e6j-ZG-sam" firstAttribute="leading" secondItem="Owe-86-6S1" secondAttribute="leading" constant="20" id="CuK-90-Hws"/>
+                                    <constraint firstAttribute="height" constant="140" id="HCL-oY-tdu"/>
+                                    <constraint firstAttribute="trailing" secondItem="e6j-ZG-sam" secondAttribute="trailing" constant="20" id="MBm-nw-sol"/>
+                                    <constraint firstItem="e6j-ZG-sam" firstAttribute="top" secondItem="Owe-86-6S1" secondAttribute="top" constant="40" id="NPw-f8-wFE"/>
+                                    <constraint firstItem="Wlk-ob-Ncb" firstAttribute="top" secondItem="e6j-ZG-sam" secondAttribute="bottom" constant="20" id="QER-Gf-1nv"/>
+                                    <constraint firstItem="Wlk-ob-Ncb" firstAttribute="leading" secondItem="Owe-86-6S1" secondAttribute="leading" constant="40" id="yJV-Ja-ShO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMp-zH-ZHI">
+                                <rect key="frame" x="0.0" y="140" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сейчас не UI тестирование 🏀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-rf-oXQ">
+                                        <rect key="frame" x="64" y="10" width="247" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ReC-CY-30r"/>
+                                    <constraint firstItem="HZK-rf-oXQ" firstAttribute="centerX" secondItem="LMp-zH-ZHI" secondAttribute="centerX" id="Ueb-14-oLW"/>
+                                    <constraint firstItem="HZK-rf-oXQ" firstAttribute="centerX" secondItem="LMp-zH-ZHI" secondAttribute="centerX" id="cDS-En-vQs"/>
+                                    <constraint firstItem="HZK-rf-oXQ" firstAttribute="centerY" secondItem="LMp-zH-ZHI" secondAttribute="centerY" id="lu3-U2-yiS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtK-l9-KRo">
+                                <rect key="frame" x="0.0" y="180" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnie-the-Pooh lived in a forest all by himself under the name of Sanders." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScD-hg-pBD">
+                                        <rect key="frame" x="20" y="10" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97660762071609497" green="0.97395700216293335" blue="0.92484897375106812" alpha="0.9995727539" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ScD-hg-pBD" firstAttribute="leading" secondItem="jtK-l9-KRo" secondAttribute="leading" constant="20" id="P8T-dz-0ts"/>
+                                    <constraint firstItem="ScD-hg-pBD" firstAttribute="centerY" secondItem="jtK-l9-KRo" secondAttribute="centerY" id="STC-hL-nMR"/>
+                                    <constraint firstAttribute="height" constant="40" id="h2F-d5-gwP"/>
+                                    <constraint firstAttribute="trailing" secondItem="ScD-hg-pBD" secondAttribute="trailing" constant="20" id="sKf-OP-890"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLK-A4-S0r">
+                                <rect key="frame" x="0.0" y="220" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="59H-1z-oxQ">
+                                        <rect key="frame" x="20" y="10" width="335" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-su-0qw">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="30"/>
+                                                <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Показать лейбл">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVx-SV-9cc"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А вот и я" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-dj-m5t">
+                                                <rect key="frame" x="208.5" y="0.0" width="126.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="59H-1z-oxQ" firstAttribute="centerY" secondItem="XLK-A4-S0r" secondAttribute="centerY" id="0LD-o2-fsD"/>
+                                    <constraint firstAttribute="height" constant="50" id="WtV-hQ-Pad"/>
+                                    <constraint firstItem="59H-1z-oxQ" firstAttribute="centerY" secondItem="XLK-A4-S0r" secondAttribute="centerY" id="Xwd-sp-oFi"/>
+                                    <constraint firstAttribute="trailing" secondItem="59H-1z-oxQ" secondAttribute="trailing" constant="20" id="lkg-H4-a0t"/>
+                                    <constraint firstItem="59H-1z-oxQ" firstAttribute="leading" secondItem="XLK-A4-S0r" secondAttribute="leading" constant="20" id="oEv-1n-JWR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ScD-hg-pBD" firstAttribute="top" secondItem="HZK-rf-oXQ" secondAttribute="bottom" constant="40" id="2vl-Si-fQr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e6j-ZG-sam" secondAttribute="trailing" constant="20" id="Dxq-YE-4Nw"/>
-                            <constraint firstItem="Wlk-ob-Ncb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="IPR-MM-2AF"/>
-                            <constraint firstItem="e6j-ZG-sam" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MJF-Kt-btL"/>
-                            <constraint firstItem="e6j-ZG-sam" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="RDX-m5-L83"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ScD-hg-pBD" secondAttribute="trailing" constant="20" id="THc-ip-FUO"/>
-                            <constraint firstItem="ScD-hg-pBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dEd-g0-6pu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wlk-ob-Ncb" secondAttribute="trailing" constant="40" id="eku-VP-53J"/>
-                            <constraint firstItem="HZK-rf-oXQ" firstAttribute="top" secondItem="Wlk-ob-Ncb" secondAttribute="bottom" constant="40" id="jjx-TA-DPL"/>
-                            <constraint firstItem="Wlk-ob-Ncb" firstAttribute="top" secondItem="e6j-ZG-sam" secondAttribute="bottom" constant="60" id="lo7-a1-94w"/>
-                            <constraint firstItem="HZK-rf-oXQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="se4-P1-MG4"/>
+                            <constraint firstItem="XLK-A4-S0r" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3ag-z1-5Az"/>
+                            <constraint firstItem="LMp-zH-ZHI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9hb-Bp-dm0"/>
+                            <constraint firstItem="jtK-l9-KRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Am7-SR-ASV"/>
+                            <constraint firstItem="jtK-l9-KRo" firstAttribute="top" secondItem="LMp-zH-ZHI" secondAttribute="bottom" id="Fv2-jb-CHH"/>
+                            <constraint firstItem="Owe-86-6S1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GBG-L4-n83"/>
+                            <constraint firstItem="jtK-l9-KRo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gsb-Ks-xsR"/>
+                            <constraint firstItem="XLK-A4-S0r" firstAttribute="top" secondItem="jtK-l9-KRo" secondAttribute="bottom" id="HwR-3c-DbE"/>
+                            <constraint firstItem="Owe-86-6S1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nde-8k-HwF"/>
+                            <constraint firstItem="Owe-86-6S1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OwX-aI-0CE"/>
+                            <constraint firstItem="LMp-zH-ZHI" firstAttribute="top" secondItem="Owe-86-6S1" secondAttribute="bottom" id="T6O-Sa-efY"/>
+                            <constraint firstItem="XLK-A4-S0r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VXA-8a-VWS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LMp-zH-ZHI" secondAttribute="trailing" id="alq-2M-oO3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -93,6 +168,7 @@
                         <outlet property="buttobThree" destination="6gG-MZ-LUG" id="gK5-x9-T9b"/>
                         <outlet property="buttonOne" destination="VFx-nK-Wqq" id="eGZ-4M-73K"/>
                         <outlet property="buttonTwo" destination="bvo-aL-YiD" id="0k9-lB-yhq"/>
+                        <outlet property="hiddenLabel" destination="Eja-dj-m5t" id="Nul-0g-0tx"/>
                         <outlet property="resultLabel" destination="e6j-ZG-sam" id="hzo-8h-Srg"/>
                         <outlet property="withoutArgumentLabel" destination="HZK-rf-oXQ" id="fqM-6W-QL4"/>
                     </connections>
