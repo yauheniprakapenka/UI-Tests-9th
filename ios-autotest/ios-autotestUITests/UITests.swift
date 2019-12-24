@@ -30,4 +30,7 @@ class UITests: UITestCase {
         XCTAssert(app.staticTexts["Идет UI тестирование! 🦠"].exists)
     }
 
+    func testNotFitText() {
+        XCTAssertTrue(app.staticTexts["Winnie-the-Pooh lived in a forest all by himself under the name of Sanders."].exists)
+    }
 }
