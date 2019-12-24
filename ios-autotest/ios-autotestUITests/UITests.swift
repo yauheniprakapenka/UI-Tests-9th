@@ -26,6 +26,10 @@ class UITests: UITestCase {
         XCTAssertTrue(buttonWithTestTwoID == 1)
     }
     
+    func testCheckLabelWithArgument() {
+        XCTAssert(app.staticTexts["Идет UI тестирование! 🦠"].exists)
+    }
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {

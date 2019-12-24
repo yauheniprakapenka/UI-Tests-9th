@@ -60,6 +60,12 @@
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сейчас не UI тестирование 🏀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-rf-oXQ">
+                                <rect key="frame" x="64" y="211.5" width="247" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -68,7 +74,9 @@
                             <constraint firstItem="e6j-ZG-sam" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MJF-Kt-btL"/>
                             <constraint firstItem="e6j-ZG-sam" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="RDX-m5-L83"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wlk-ob-Ncb" secondAttribute="trailing" constant="40" id="eku-VP-53J"/>
+                            <constraint firstItem="HZK-rf-oXQ" firstAttribute="top" secondItem="Wlk-ob-Ncb" secondAttribute="bottom" constant="40" id="jjx-TA-DPL"/>
                             <constraint firstItem="Wlk-ob-Ncb" firstAttribute="top" secondItem="e6j-ZG-sam" secondAttribute="bottom" constant="60" id="lo7-a1-94w"/>
+                            <constraint firstItem="HZK-rf-oXQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="se4-P1-MG4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -77,6 +85,7 @@
                         <outlet property="buttonOne" destination="VFx-nK-Wqq" id="eGZ-4M-73K"/>
                         <outlet property="buttonTwo" destination="bvo-aL-YiD" id="0k9-lB-yhq"/>
                         <outlet property="resultLabel" destination="e6j-ZG-sam" id="hzo-8h-Srg"/>
+                        <outlet property="withoutArgumentLabel" destination="HZK-rf-oXQ" id="fqM-6W-QL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

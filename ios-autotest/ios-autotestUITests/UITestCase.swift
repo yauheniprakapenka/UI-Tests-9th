@@ -13,6 +13,7 @@ class UITestCase: XCTestCase {
 
     override func setUp() {
         continueAfterFailure = false
+        app.launchArguments.append("UITesting")
         app.launch()
     }
 

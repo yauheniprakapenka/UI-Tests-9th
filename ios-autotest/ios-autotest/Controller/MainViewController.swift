@@ -11,9 +11,18 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var withoutArgumentLabel: UILabel!
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttobThree: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if ProcessInfo.processInfo.arguments.contains("UITesting") {
+            withoutArgumentLabel.text = "Идет UI тестирование! 🦠"
+        }
+    }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         resultLabel.text = "\(sender.currentTitle ?? "") нажата"
