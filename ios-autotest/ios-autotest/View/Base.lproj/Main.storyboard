@@ -21,6 +21,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-nK-Wqq">
                                         <rect key="frame" x="0.0" y="0.0" width="87.5" height="30"/>
                                         <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
                                         <state key="normal" title="Кнопка 1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -31,6 +32,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-aL-YiD">
                                         <rect key="frame" x="103.5" y="0.0" width="88" height="30"/>
                                         <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
                                         <color key="tintColor" red="0.090204529464244843" green="0.79877620935440063" blue="0.076208092272281647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Кнопка 2">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,6 +44,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-MZ-LUG">
                                         <rect key="frame" x="207.5" y="0.0" width="87.5" height="30"/>
                                         <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="testTwoID"/>
                                         <state key="normal" title="Кнопка 3">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

@@ -19,6 +19,13 @@ class UITests: UITestCase {
         XCTAssert(app.staticTexts["Кнопка 3 нажата"].exists)
     }
     
+    func testGetNumberOfElementsMatchingIdentifier() {
+        let buttonWithTestOneID = app.buttons.matching(identifier: "testOneID").count
+        XCTAssertTrue(buttonWithTestOneID == 2)
+        let buttonWithTestTwoID = app.buttons.matching(identifier: "testTwoID").count
+        XCTAssertTrue(buttonWithTestTwoID == 1)
+    }
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
