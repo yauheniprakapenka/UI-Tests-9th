@@ -13,13 +13,18 @@ class MainViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var withoutArgumentLabel: UILabel!
     @IBOutlet weak var hiddenLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttobThree: UIButton!
     
+    var countTimer = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startTimer()
         
         if ProcessInfo.processInfo.arguments.contains("UITesting") {
             withoutArgumentLabel.text = "Идет UI тестирование! 🦠"
@@ -46,6 +51,14 @@ class MainViewController: UIViewController {
         hiddenLabel.alpha = 1
     }
     
+    func startTimer() {
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countSeconds), userInfo: nil, repeats: true)
+    }
+    
+    @objc func countSeconds() {
+        timerLabel.text = String(countTimer)
+        countTimer += 1
+    }
 
 }
 
