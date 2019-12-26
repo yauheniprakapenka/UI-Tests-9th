@@ -11,9 +11,25 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var withoutArgumentLabel: UILabel!
+    @IBOutlet weak var hiddenLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttobThree: UIButton!
+    
+    var countTimer = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        startTimer()
+        
+        if ProcessInfo.processInfo.arguments.contains("UITesting") {
+            withoutArgumentLabel.text = "Идет UI тестирование! 🦠"
+        }
+    }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         resultLabel.text = "\(sender.currentTitle ?? "") нажата"
@@ -25,6 +41,23 @@ class MainViewController: UIViewController {
         }
         
         sender.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    }
+    
+    @IBAction func showButtonTapped(_ sender: UIButton) {
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(showLabel), userInfo: nil, repeats: false)
+    }
+    
+    @objc func showLabel() {
+        hiddenLabel.alpha = 1
+    }
+    
+    func startTimer() {
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countSeconds), userInfo: nil, repeats: true)
+    }
+    
+    @objc func countSeconds() {
+        timerLabel.text = String(countTimer)
+        countTimer += 1
     }
 
 }
