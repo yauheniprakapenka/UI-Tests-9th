@@ -35,17 +35,17 @@ class UITests: UITestCase {
     }
     
     func testWaitingForAnElementToAppear() {
-        app.buttons["Показать лейбл"].tap()
+        app.buttons["Показать скрытый текст"].tap()
         XCTAssertTrue(app.staticTexts["А вот и я"].waitForExistence(timeout: 7))
     }
     
     func testWaitingForAnElementToNotAppear() {
-        let notExistsText = app.staticTexts["Не существующий элемент"]
+        let text = app.staticTexts["Не существующий элемент"]
         
-        app.buttons["Показать лейбл"].tap()
-        notExistsText.waitForExistence(timeout: 5)
+        app.buttons["Показать скрытый текст"].tap()
+        text.waitForExistence(timeout: 5) // ждем появления text
         
-        if notExistsText.exists {
+        if text.exists {
             app.buttons["Кнопка 1"].tap()
             XCTAssertTrue(app.staticTexts["Кнопка 1 нажата"].exists)
         } else {
@@ -53,4 +53,5 @@ class UITests: UITestCase {
             XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
         }
     }
+
 }

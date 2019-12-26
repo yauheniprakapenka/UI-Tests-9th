@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,23 +11,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ios_autotest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-86-6S1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6j-ZG-sam">
-                                        <rect key="frame" x="20" y="40" width="335" height="21.5"/>
+                                        <rect key="frame" x="20" y="40" width="560" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-ob-Ncb">
-                                        <rect key="frame" x="40" y="81.5" width="295" height="30"/>
+                                        <rect key="frame" x="40" y="81.5" width="520" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-nK-Wqq">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
                                                 <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
                                                 <state key="normal" title="Кнопка 1">
@@ -39,7 +38,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-aL-YiD">
-                                                <rect key="frame" x="103.5" y="0.0" width="88" height="30"/>
+                                                <rect key="frame" x="178.5" y="0.0" width="163" height="30"/>
                                                 <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="testOneID"/>
                                                 <color key="tintColor" red="0.090204529464244843" green="0.79877620935440063" blue="0.076208092272281647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +50,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-MZ-LUG">
-                                                <rect key="frame" x="207.5" y="0.0" width="87.5" height="30"/>
+                                                <rect key="frame" x="357.5" y="0.0" width="162.5" height="30"/>
                                                 <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="testTwoID"/>
                                                 <state key="normal" title="Кнопка 3">
@@ -64,7 +63,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-84-8KT">
-                                        <rect key="frame" x="344.5" y="20" width="10.5" height="20.5"/>
+                                        <rect key="frame" x="569.5" y="20" width="10.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -84,10 +83,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMp-zH-ZHI">
-                                <rect key="frame" x="0.0" y="140" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="140" width="600" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сейчас не UI тестирование 🏀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-rf-oXQ">
-                                        <rect key="frame" x="64" y="10" width="247" height="20.5"/>
+                                        <rect key="frame" x="176.5" y="10" width="247" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -102,10 +101,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtK-l9-KRo">
-                                <rect key="frame" x="0.0" y="180" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnie-the-Pooh lived in a forest all by himself under the name of Sanders." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScD-hg-pBD">
-                                        <rect key="frame" x="20" y="10" width="335" height="20.5"/>
+                                        <rect key="frame" x="20" y="10" width="560" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -120,15 +119,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLK-A4-S0r">
-                                <rect key="frame" x="0.0" y="220" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="220" width="600" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="59H-1z-oxQ">
-                                        <rect key="frame" x="20" y="10" width="335" height="30"/>
+                                        <rect key="frame" x="20" y="10" width="560" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-su-0qw">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
                                                 <color key="backgroundColor" red="0.077691651880741119" green="0.62373387813568115" blue="0.95536631345748901" alpha="0.99977111819999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Показать лейбл">
+                                                <state key="normal" title="Показать скрытый текст">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -136,7 +135,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А вот и я" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-dj-m5t">
-                                                <rect key="frame" x="208.5" y="0.0" width="126.5" height="30"/>
+                                                <rect key="frame" x="388" y="0.0" width="172" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
