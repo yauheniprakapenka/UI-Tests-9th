@@ -36,14 +36,21 @@ class UITests: UITestCase {
     
     func testWaitingForAnElementToAppear() {
         app.buttons["Показать лейбл"].tap()
+        XCTAssertTrue(app.staticTexts["А вот и я"].waitForExistence(timeout: 7))
+    }
+    
+    func testWaitingForAnElementToNotAppear() {
+        let notExistsText = app.staticTexts["Не существующий элемент"]
         
-        let label = app.staticTexts["А вот и я"]
-        XCTAssertFalse(label.exists)
+        app.buttons["Показать лейбл"].tap()
+        notExistsText.waitForExistence(timeout: 5)
         
-        let exists = NSPredicate(format: "exists == true")
-        expectation(for: exists, evaluatedWith: label, handler: nil)
-        
-        waitForExpectations(timeout: 4, handler: nil)
-        XCTAssertTrue(label.exists)
+        if notExistsText.exists {
+            app.buttons["Кнопка 1"].tap()
+            XCTAssertTrue(app.staticTexts["Кнопка 1 нажата"].exists)
+        } else {
+            app.buttons["Кнопка 3"].tap()
+            XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
+        }
     }
 }
