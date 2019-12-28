@@ -9,12 +9,18 @@
 import XCTest
 
 class SetupUITest: XCTestCase {
+    
     let app = XCUIApplication()
 
     override func setUp() {
         continueAfterFailure = false
         app.launchArguments.append("UITesting")
         app.launch()
+        
+        addUIInterruptionMonitor(withDescription: "System Dialog") { (alert) -> Bool in
+            alert.buttons["Allow While Using App"].tap()
+            return true
+        }
     }
 
     override func tearDown() {
