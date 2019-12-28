@@ -43,7 +43,7 @@ class UITestCase: SetupUITest {
         let text = app.staticTexts["Не существующий элемент"]
         
         app.buttons["Показать скрытый текст"].tap()
-        text.waitForExistence(timeout: 5) // ждем появления text
+        _ = text.waitForExistence(timeout: 5) // ждем появления text
         
         if text.exists {
             app.buttons["Кнопка 1"].tap()
