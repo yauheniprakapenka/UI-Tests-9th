@@ -8,7 +8,7 @@
 
 import XCTest
 
-extension UITests {
+extension UITestCase {
     
     // MARK: - Tap
     

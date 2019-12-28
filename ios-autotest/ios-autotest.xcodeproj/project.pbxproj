@@ -13,8 +13,8 @@
 		3EEFB59523B176DF000A71E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EEFB59323B176DF000A71E4 /* Main.storyboard */; };
 		3EEFB59723B176E4000A71E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EEFB59623B176E4000A71E4 /* Assets.xcassets */; };
 		3EEFB59A23B176E4000A71E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EEFB59823B176E4000A71E4 /* LaunchScreen.storyboard */; };
-		3EEFB5A823B1794C000A71E4 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB5A723B1794C000A71E4 /* UITestCase.swift */; };
-		3EEFB5B023B1E04E000A71E4 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB5AF23B1E04E000A71E4 /* UITests.swift */; };
+		3EEFB5A823B1794C000A71E4 /* SetupUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB5A723B1794C000A71E4 /* SetupUITest.swift */; };
+		3EEFB5B023B1E04E000A71E4 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB5AF23B1E04E000A71E4 /* UITestCase.swift */; };
 		3EEFB5B823B1E95A000A71E4 /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB5B723B1E95A000A71E4 /* UITestHelper.swift */; };
 		3EEFB5D823B2B9EF000A71E4 /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB5D723B2B9EF000A71E4 /* Readme.swift */; };
 /* End PBXBuildFile section */
@@ -39,9 +39,9 @@
 		3EEFB59923B176E4000A71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EEFB59B23B176E4000A71E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EEFB5A523B1794C000A71E4 /* ios-autotestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-autotestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EEFB5A723B1794C000A71E4 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		3EEFB5A723B1794C000A71E4 /* SetupUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupUITest.swift; sourceTree = "<group>"; };
 		3EEFB5A923B1794C000A71E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EEFB5AF23B1E04E000A71E4 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		3EEFB5AF23B1E04E000A71E4 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		3EEFB5B723B1E95A000A71E4 /* UITestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
 		3EEFB5D723B2B9EF000A71E4 /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,8 +96,8 @@
 		3EEFB5A623B1794C000A71E4 /* ios-autotestUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3EEFB5A723B1794C000A71E4 /* UITestCase.swift */,
-				3EEFB5AF23B1E04E000A71E4 /* UITests.swift */,
+				3EEFB5A723B1794C000A71E4 /* SetupUITest.swift */,
+				3EEFB5AF23B1E04E000A71E4 /* UITestCase.swift */,
 				3EEFB5B723B1E95A000A71E4 /* UITestHelper.swift */,
 				3EEFB5A923B1794C000A71E4 /* Info.plist */,
 				3EEFB5D723B2B9EF000A71E4 /* Readme.swift */,
@@ -253,8 +253,8 @@
 			files = (
 				3EEFB5B823B1E95A000A71E4 /* UITestHelper.swift in Sources */,
 				3EEFB5D823B2B9EF000A71E4 /* Readme.swift in Sources */,
-				3EEFB5A823B1794C000A71E4 /* UITestCase.swift in Sources */,
-				3EEFB5B023B1E04E000A71E4 /* UITests.swift in Sources */,
+				3EEFB5A823B1794C000A71E4 /* SetupUITest.swift in Sources */,
+				3EEFB5B023B1E04E000A71E4 /* UITestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
