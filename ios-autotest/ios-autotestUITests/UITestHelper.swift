@@ -17,5 +17,4 @@ extension UITestCase {
         let coordinate = normalized.withOffset(CGVector(dx: xCoordinate, dy: yCoordinate))
         coordinate.tap()
     }
-    
 }

@@ -17,13 +17,21 @@ class SetupUITest: XCTestCase {
         app.launchArguments.append("UITesting")
         app.launch()
         
-        addUIInterruptionMonitor(withDescription: "System Dialog") { (alert) -> Bool in
-            alert.buttons["Allow While Using App"].tap()
-            return true
-        }
+        addUIInterruptionMonitor()
     }
 
-    override func tearDown() {
-        
+    private func addUIInterruptionMonitor() {
+        addUIInterruptionMonitor(withDescription: "System Dialog") { (alert) -> Bool in
+            let currentLocation = String(NSLocale.current.identifier)
+            print(currentLocation)
+            
+            if currentLocation == "en_US" {
+                alert.buttons["Allow While Using App"].tap()
+            } else if currentLocation == "ru_BY" {
+                alert.buttons["При использовании"].tap()
+            }
+
+            return true
+        }
     }
 }
