@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var withoutArgumentLabel: UILabel!
@@ -64,4 +64,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         timerLabel.text = String(countTimer)
         countTimer += 1
     }
+    
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        resultLabel.text = "аАяЯaAzZ09!)=| отправлен"
+    }
+    
 }

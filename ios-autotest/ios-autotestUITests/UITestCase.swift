@@ -11,11 +11,11 @@ import XCTest
 class UITestCase: SetupUITest {
     
     func testTapOnCoordinate() {
-        tapOnCoordinate(at: 41, and: 102)
+        tapOnCoordinate(at: 41, and: 122)
         XCTAssertTrue(app.staticTexts["Кнопка 1 нажата"].exists)
-        tapOnCoordinate(at: 144, and: 102)
+        tapOnCoordinate(at: 144, and: 122)
         XCTAssertTrue(app.staticTexts["Кнопка 2 нажата"].exists)
-        tapOnCoordinate(at: 248, and: 102)
+        tapOnCoordinate(at: 248, and: 122)
         XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
     }
     
@@ -53,5 +53,17 @@ class UITestCase: SetupUITest {
             XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
         }
     }
-
+    
+    func testCheatSheet() {
+        
+        // Тапнуть на кнопку
+        app.buttons["Кнопка 3"].tap()
+        XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
+        
+        // Ввести текст в текстовое поле
+        app.textFields["Введите текст"].tap()
+        app.textFields["Введите текст"].typeText("аАяЯaAzZ09!)=|")
+        app.buttons["Отправить"].tap()
+        XCTAssertTrue(app.staticTexts["аАяЯaAzZ09!)=| отправлен"].exists)
+    }
 }
