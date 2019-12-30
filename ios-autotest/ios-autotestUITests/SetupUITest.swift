@@ -19,6 +19,8 @@ class SetupUITest: XCTestCase {
         
         checkDeviceInfo()
         
+        XCUIDevice.shared.orientation = .portrait
+        
         addUIInterruptionMonitor()
     }
 
@@ -42,7 +44,5 @@ class SetupUITest: XCTestCase {
         guard deviceInfo["model"] == "iPhone 8" else {
             fatalError("Select simulator iPhone 8 to take the UI test")
         }
-        
-        XCUIDevice.shared.orientation = .portrait
     }
 }
