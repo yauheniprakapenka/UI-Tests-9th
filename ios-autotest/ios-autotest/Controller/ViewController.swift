@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var withoutArgumentLabel: UILabel!
@@ -20,9 +21,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var buttobThree: UIButton!
     
     var countTimer = 0
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         
         startTimer()
         
@@ -59,6 +64,9 @@ class MainViewController: UIViewController {
         timerLabel.text = String(countTimer)
         countTimer += 1
     }
-
+    
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        resultLabel.text = "аАяЯaAzZ09!)=| отправлен"
+    }
+    
 }
-

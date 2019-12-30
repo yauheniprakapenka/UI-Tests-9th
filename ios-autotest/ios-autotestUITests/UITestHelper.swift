@@ -8,7 +8,7 @@
 
 import XCTest
 
-extension UITests {
+extension UITestCase {
     
     // MARK: - Tap
     
@@ -17,5 +17,4 @@ extension UITests {
         let coordinate = normalized.withOffset(CGVector(dx: xCoordinate, dy: yCoordinate))
         coordinate.tap()
     }
-    
 }
