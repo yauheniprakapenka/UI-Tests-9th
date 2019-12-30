@@ -66,4 +66,18 @@ class UITestCase: SetupUITest {
         app.buttons["Отправить"].tap()
         XCTAssertTrue(app.staticTexts["аАяЯaAzZ09!)=| отправлен"].exists)
     }
+    
+    func testStateChange() {
+        XCUIDevice.shared.press(.home)
+        XCTAssertTrue(app.wait(for: .runningBackground, timeout: 5))
+        
+        app.activate()
+        XCTAssertTrue(app.state == .runningForeground)
+        
+        app.terminate()
+        XCTAssertTrue(app.state == .notRunning)
+        
+        app.launch()
+        XCTAssertTrue(app.state == .runningForeground)
+    }
 }
