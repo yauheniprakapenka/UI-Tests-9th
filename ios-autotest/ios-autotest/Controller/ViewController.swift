@@ -14,11 +14,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var withoutArgumentLabel: UILabel!
     @IBOutlet weak var hiddenLabel: UILabel!
-    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttobThree: UIButton!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var countTimer = 0
     let locationManager = CLLocationManager()
@@ -29,10 +30,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
-        startTimer()
-        
         if ProcessInfo.processInfo.arguments.contains("UITesting") {
-            withoutArgumentLabel.text = "Идет UI тестирование! 🦠"
+            withoutArgumentLabel.text = "👩‍🔬💉 Режим ui тестирования"
+            withoutArgumentLabel.textColor = .red
+            activityIndicator.alpha = 1
         }
     }
     
@@ -54,15 +55,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @objc func showLabel() {
         hiddenLabel.alpha = 1
-    }
-    
-    func startTimer() {
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countSeconds), userInfo: nil, repeats: true)
-    }
-    
-    @objc func countSeconds() {
-        timerLabel.text = String(countTimer)
-        countTimer += 1
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {

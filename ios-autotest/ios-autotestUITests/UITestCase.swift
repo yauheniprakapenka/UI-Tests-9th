@@ -27,7 +27,7 @@ class UITestCase: SetupUITest {
     }
     
     func testCheckLabelWithArgument() {
-        XCTAssertTrue(app.staticTexts["Идет UI тестирование! 🦠"].exists)
+        XCTAssertTrue(app.staticTexts["👩‍🔬💉 Режим ui тестирования"].exists)
     }
 
     func testNotFitText() {
@@ -39,16 +39,16 @@ class UITestCase: SetupUITest {
         XCTAssertTrue(app.staticTexts["А вот и я"].waitForExistence(timeout: 7))
     }
     
-    func testWaitingForAnElementToNotAppear() {
-        let text = app.staticTexts["Не существующий элемент"]
+    func testFork() {
+        let text = app.staticTexts["Этот текст не появится"]
         
         app.buttons["Показать скрытый текст"].tap()
         _ = text.waitForExistence(timeout: 5) // ждем появления text
         
-        if text.exists {
+        if text.exists { // не выполнится
             app.buttons["Кнопка 1"].tap()
             XCTAssertTrue(app.staticTexts["Кнопка 1 нажата"].exists)
-        } else {
+        } else { // выполнится
             app.buttons["Кнопка 3"].tap()
             XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
         }
@@ -80,4 +80,5 @@ class UITestCase: SetupUITest {
         app.launch()
         XCTAssertTrue(app.state == .runningForeground)
     }
+    
 }

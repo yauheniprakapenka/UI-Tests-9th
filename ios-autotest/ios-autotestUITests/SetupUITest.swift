@@ -39,7 +39,10 @@ class SetupUITest: XCTestCase {
     }
     
     private func checkDeviceInfo() {
-        let deviceInfo = ["os": UIDevice.current.systemName, "version": UIDevice.current.systemVersion, "model": UIDevice.current.name, "uuid": UIDevice.current.identifierForVendor!.uuidString]
+        let deviceInfo = ["os": UIDevice.current.systemName,
+                          "version": UIDevice.current.systemVersion,
+                          "model": UIDevice.current.name,
+                          "uuid": UIDevice.current.identifierForVendor!.uuidString]
         
         guard deviceInfo["model"] == "iPhone 8" else {
             fatalError("Select simulator iPhone 8 to take the UI test")
