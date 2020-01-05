@@ -106,7 +106,7 @@
                                             <action selector="showButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVx-SV-9cc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="А вот и я" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-dj-m5t">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="А вот и я" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-dj-m5t">
                                         <rect key="frame" x="220" y="15" width="147" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,6 +172,24 @@
                                     <constraint firstItem="U5E-LK-Vp6" firstAttribute="leading" secondItem="HZK-rf-oXQ" secondAttribute="trailing" constant="12" id="s5R-07-rfY"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mz2-a0-DOz">
+                                <rect key="frame" x="0.0" y="256" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsS-sD-WaB">
+                                        <rect key="frame" x="16" y="5" width="162" height="30"/>
+                                        <state key="normal" title="Перекрыть интерфейс"/>
+                                        <connections>
+                                            <action selector="coverInterfaceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hGZ-Jz-uV2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="CsS-sD-WaB" firstAttribute="leading" secondItem="Mz2-a0-DOz" secondAttribute="leading" constant="16" id="NMN-Mf-9Ub"/>
+                                    <constraint firstAttribute="height" constant="40" id="QwK-SX-lWy"/>
+                                    <constraint firstItem="CsS-sD-WaB" firstAttribute="centerY" secondItem="Mz2-a0-DOz" secondAttribute="centerY" id="UKC-0F-ncS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -186,10 +204,13 @@
                             <constraint firstItem="LMp-zH-ZHI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P8c-sE-nlP"/>
                             <constraint firstItem="30I-Ac-cDG" firstAttribute="top" secondItem="XLK-A4-S0r" secondAttribute="bottom" id="Sf5-WB-NJb"/>
                             <constraint firstItem="XLK-A4-S0r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VXA-8a-VWS"/>
+                            <constraint firstItem="Mz2-a0-DOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZSg-9n-rrR"/>
                             <constraint firstItem="LMp-zH-ZHI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dwy-pG-Ty2"/>
                             <constraint firstItem="Owe-86-6S1" firstAttribute="top" secondItem="LMp-zH-ZHI" secondAttribute="bottom" id="gy3-N9-WxB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mz2-a0-DOz" secondAttribute="trailing" id="hPR-bJ-A89"/>
                             <constraint firstItem="LMp-zH-ZHI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hpG-c9-BCd"/>
                             <constraint firstItem="30I-Ac-cDG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uML-yP-daR"/>
+                            <constraint firstItem="Mz2-a0-DOz" firstAttribute="top" secondItem="30I-Ac-cDG" secondAttribute="bottom" id="vxA-cz-4Ro"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

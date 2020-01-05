@@ -50,15 +50,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func showButtonTapped(_ sender: UIButton) {
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(showLabel), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(showHiddenLabel), userInfo: nil, repeats: false)
     }
     
-    @objc func showLabel() {
+    @objc func showHiddenLabel() {
         hiddenLabel.alpha = 1
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
         resultLabel.text = "аАяЯaAzZ09!)=| отправлен"
+    }
+    
+    @IBAction func coverInterfaceButtonTapped(_ sender: UIButton) {
+        buttonOne.isEnabled = false
+        makeView()
+    }
+    
+    private func makeView() {
+        let customView = UIView()
+        customView.frame = CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 100)
+        customView.backgroundColor = .red
+        view.addSubview(customView)
     }
     
 }

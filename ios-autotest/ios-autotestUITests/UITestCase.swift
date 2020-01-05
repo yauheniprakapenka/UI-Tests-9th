@@ -35,16 +35,15 @@ class UITestCase: SetupUITest {
     }
     
     func testWaitingForAnElementToAppear() {
+        XCTAssertFalse(app.staticTexts["А вот и я"].exists)
         app.buttons["Показать скрытый текст"].tap()
         XCTAssertTrue(app.staticTexts["А вот и я"].waitForExistence(timeout: 7))
     }
     
     func testFork() {
         let text = app.staticTexts["Этот текст не появится"]
-        
         app.buttons["Показать скрытый текст"].tap()
         _ = text.waitForExistence(timeout: 5) // ждем появления text
-        
         if text.exists { // не выполнится
             app.buttons["Кнопка 1"].tap()
             XCTAssertTrue(app.staticTexts["Кнопка 1 нажата"].exists)
@@ -55,11 +54,9 @@ class UITestCase: SetupUITest {
     }
     
     func testCheatSheet() {
-        
         // Тапнуть на кнопку
         app.buttons["Кнопка 3"].tap()
         XCTAssertTrue(app.staticTexts["Кнопка 3 нажата"].exists)
-        
         // Ввести текст в текстовое поле
         app.textFields["Введите текст"].tap()
         app.textFields["Введите текст"].typeText("аАяЯaAzZ09!)=|")
@@ -70,15 +67,19 @@ class UITestCase: SetupUITest {
     func testStateChange() {
         XCUIDevice.shared.press(.home)
         XCTAssertTrue(app.wait(for: .runningBackground, timeout: 5))
-        
         app.activate()
         XCTAssertTrue(app.state == .runningForeground)
-        
         app.terminate()
         XCTAssertTrue(app.state == .notRunning)
-        
         app.launch()
         XCTAssertTrue(app.state == .runningForeground)
+    }
+    
+    func testElementIsHittable() {
+        XCTAssertTrue(app.buttons["Кнопка 1"].isHittable)
+        app.buttons["Перекрыть интерфейс"].tap()
+        sleep(1)
+        XCTAssertFalse(app.buttons["Кнопка 1"].isHittable)
     }
     
 }
