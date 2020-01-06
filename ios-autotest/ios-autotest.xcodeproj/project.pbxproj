@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E31645023C3221A00DAF80F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31644F23C3221A00DAF80F /* CustomCollectionViewCell.swift */; };
+		3E31646023C3661900DAF80F /* MakeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31645F23C3661900DAF80F /* MakeSwipe.swift */; };
 		3EEFB58E23B176DF000A71E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB58D23B176DF000A71E4 /* AppDelegate.swift */; };
 		3EEFB59023B176DF000A71E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB58F23B176DF000A71E4 /* SceneDelegate.swift */; };
 		3EEFB59223B176DF000A71E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFB59123B176DF000A71E4 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E31644F23C3221A00DAF80F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E31645F23C3661900DAF80F /* MakeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSwipe.swift; sourceTree = "<group>"; };
 		3EEFB58A23B176DF000A71E4 /* ios-autotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-autotest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EEFB58D23B176DF000A71E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EEFB58F23B176DF000A71E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E31644E23C321F300DAF80F /* CustomCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3E31644F23C3221A00DAF80F /* CustomCollectionViewCell.swift */,
+			);
+			path = CustomCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3E31645123C3281900DAF80F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3E31645E23C365F900DAF80F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3E31645F23C3661900DAF80F /* MakeSwipe.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		3EEFB58123B176DF000A71E4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +123,7 @@
 		3EEFB5A623B1794C000A71E4 /* ios-autotestUITests */ = {
 			isa = PBXGroup;
 			children = (
+				3E31645E23C365F900DAF80F /* Extension */,
 				3EEFB5D723B2B9EF000A71E4 /* Readme.swift */,
 				3EEFB5A723B1794C000A71E4 /* SetupUITest.swift */,
 				3EEFB5AF23B1E04E000A71E4 /* UITestCase.swift */,
@@ -115,6 +143,7 @@
 		3EEFB5B323B1E329000A71E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E31644E23C321F300DAF80F /* CustomCollectionViewCell */,
 				3EEFB59323B176DF000A71E4 /* Main.storyboard */,
 				3EEFB59823B176E4000A71E4 /* LaunchScreen.storyboard */,
 			);
@@ -132,6 +161,7 @@
 		3EEFB5B523B1E338000A71E4 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				3E31645123C3281900DAF80F /* Images */,
 				3EEFB58D23B176DF000A71E4 /* AppDelegate.swift */,
 				3EEFB58F23B176DF000A71E4 /* SceneDelegate.swift */,
 				3EEFB59623B176E4000A71E4 /* Assets.xcassets */,
@@ -243,6 +273,7 @@
 			files = (
 				3EEFB59223B176DF000A71E4 /* ViewController.swift in Sources */,
 				3EEFB58E23B176DF000A71E4 /* AppDelegate.swift in Sources */,
+				3E31645023C3221A00DAF80F /* CustomCollectionViewCell.swift in Sources */,
 				3EEFB59023B176DF000A71E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EEFB5B823B1E95A000A71E4 /* UITestHelper.swift in Sources */,
+				3E31646023C3661900DAF80F /* MakeSwipe.swift in Sources */,
 				3EEFB5D823B2B9EF000A71E4 /* Readme.swift in Sources */,
 				3EEFB5A823B1794C000A71E4 /* SetupUITest.swift in Sources */,
 				3EEFB5B023B1E04E000A71E4 /* UITestCase.swift in Sources */,
