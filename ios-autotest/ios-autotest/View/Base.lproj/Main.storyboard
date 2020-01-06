@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -190,19 +191,69 @@
                                     <constraint firstItem="CsS-sD-WaB" firstAttribute="centerY" secondItem="Mz2-a0-DOz" secondAttribute="centerY" id="UKC-0F-ncS"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cjW-HC-b7y">
+                                <rect key="frame" x="16" y="587" width="359" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0a1-Cl-gqd"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DFj-vb-uaJ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="BEy-Cv-hbX" customClass="CustomCollectionViewCell" customModule="ios_autotest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OWc-w6-cdz">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tumblr_ol6o615mfP1qa9gmgo10_500" translatesAutoresizingMaskIntoConstraints="NO" id="4UW-Xm-9Rs">
+                                                    <rect key="frame" x="7" y="0.0" width="44" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-tJ-yRY">
+                                                    <rect key="frame" x="6.5" y="28" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="R2W-tJ-yRY" secondAttribute="bottom" constant="4" id="6nJ-Cp-LUJ"/>
+                                                <constraint firstItem="R2W-tJ-yRY" firstAttribute="centerX" secondItem="OWc-w6-cdz" secondAttribute="centerX" id="gWv-1p-YuY"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="4UW-Xm-9Rs" id="kpi-Xe-yXQ"/>
+                                            <outlet property="label" destination="R2W-tJ-yRY" id="5rK-P5-1yY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gVO-GZ-UAK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hgG-sV-UGF"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cjW-HC-b7y" secondAttribute="bottom" constant="20" id="0CN-nH-qIL"/>
                             <constraint firstItem="XLK-A4-S0r" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3ag-z1-5Az"/>
                             <constraint firstItem="jtK-l9-KRo" firstAttribute="top" secondItem="Owe-86-6S1" secondAttribute="bottom" id="3qE-Z6-NJp"/>
                             <constraint firstItem="jtK-l9-KRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Am7-SR-ASV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30I-Ac-cDG" secondAttribute="trailing" id="EOU-uT-lrd"/>
                             <constraint firstItem="jtK-l9-KRo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gsb-Ks-xsR"/>
                             <constraint firstItem="XLK-A4-S0r" firstAttribute="top" secondItem="jtK-l9-KRo" secondAttribute="bottom" id="HwR-3c-DbE"/>
+                            <constraint firstItem="cjW-HC-b7y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="L2B-t7-5f9"/>
                             <constraint firstItem="Owe-86-6S1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nde-8k-HwF"/>
                             <constraint firstItem="Owe-86-6S1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OwX-aI-0CE"/>
                             <constraint firstItem="LMp-zH-ZHI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P8c-sE-nlP"/>
                             <constraint firstItem="30I-Ac-cDG" firstAttribute="top" secondItem="XLK-A4-S0r" secondAttribute="bottom" id="Sf5-WB-NJb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cjW-HC-b7y" secondAttribute="trailing" id="Ugj-41-mhz"/>
                             <constraint firstItem="XLK-A4-S0r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VXA-8a-VWS"/>
                             <constraint firstItem="Mz2-a0-DOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZSg-9n-rrR"/>
                             <constraint firstItem="LMp-zH-ZHI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dwy-pG-Ty2"/>
@@ -229,4 +280,7 @@
             <point key="canvasLocation" x="135.19999999999999" y="113.79310344827587"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tumblr_ol6o615mfP1qa9gmgo10_500" width="500" height="274"/>
+    </resources>
 </document>
