@@ -82,4 +82,13 @@ class UITestCase: SetupUITest {
         XCTAssertFalse(app.buttons["Кнопка 1"].isHittable)
     }
     
+    func testElementsAreHittableWithSwipe() {
+        XCTAssertTrue(app.staticTexts["Утренний рассвет"].isHittable)
+        app.staticTexts["Утренний рассвет"].makeSwipe(direction: .Left, adjustment: 0.8)
+        XCTAssertTrue(app.staticTexts["Вечерний закат"].isHittable)
+        app.staticTexts["Вечерний закат"].makeSwipe(direction: .Left, adjustment: 0.8)
+        XCTAssertTrue(app.staticTexts["Дивный день"].isHittable)
+    }
 }
+
+

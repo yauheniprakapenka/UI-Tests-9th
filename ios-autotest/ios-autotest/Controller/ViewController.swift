@@ -21,7 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     private let locationManager = CLLocationManager()
     private let textArray = ["Утренний рассвет", "Вечерний закат", "Дивный день"]
-    private let imagesArray = [#imageLiteral(resourceName: "tumblr_ol6o615mfP1qa9gmgo10_500"), #imageLiteral(resourceName: "tumblr_ol6o615mfP1qa9gmgo1_500"), #imageLiteral(resourceName: "tumblr_ol6o615mfP1qa9gmgo6_500")]
+    private let imagesArray = [#imageLiteral(resourceName: "nature-2"), #imageLiteral(resourceName: "nature-3"), #imageLiteral(resourceName: "nature-1")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
