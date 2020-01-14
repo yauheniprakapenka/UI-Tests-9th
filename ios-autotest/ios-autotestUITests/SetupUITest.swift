@@ -15,16 +15,13 @@ class SetupUITest: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app.launchArguments.append("UITesting")
-        app.launch()
-        
-        checkDeviceInfo()
-        
         XCUIDevice.shared.orientation = .portrait
-        
-        addUIInterruptionMonitor()
+        app.launch()
+        checkDevice()
+        checkAlertInterruption()
     }
 
-    private func addUIInterruptionMonitor() {
+    private func checkAlertInterruption() {
         addUIInterruptionMonitor(withDescription: "System Dialog") { (alert) -> Bool in
             let currentLocation = String(NSLocale.current.identifier)
             
@@ -38,7 +35,7 @@ class SetupUITest: XCTestCase {
         }
     }
     
-    private func checkDeviceInfo() {
+    private func checkDevice() {
         let deviceInfo = ["os": UIDevice.current.systemName,
                           "version": UIDevice.current.systemVersion,
                           "model": UIDevice.current.name,
