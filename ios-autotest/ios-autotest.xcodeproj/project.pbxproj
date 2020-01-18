@@ -76,13 +76,6 @@
 			path = CustomCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		3E31645123C3281900DAF80F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		3E31645E23C365F900DAF80F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +154,6 @@
 		3EEFB5B523B1E338000A71E4 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
-				3E31645123C3281900DAF80F /* Images */,
 				3EEFB58D23B176DF000A71E4 /* AppDelegate.swift */,
 				3EEFB58F23B176DF000A71E4 /* SceneDelegate.swift */,
 				3EEFB59623B176E4000A71E4 /* Assets.xcassets */,
