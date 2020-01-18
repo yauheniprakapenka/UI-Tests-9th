@@ -25,21 +25,22 @@ class SetupUITest: XCTestCase {
         addUIInterruptionMonitor(withDescription: "System Dialog") { (alert) -> Bool in
             let currentLocation = String(NSLocale.current.identifier)
             
-            if currentLocation == "en_US" {
-                alert.buttons["Allow While Using App"].tap()
-            } else if currentLocation == "ru_BY" {
-                alert.buttons["При использовании"].tap()
+            switch currentLocation {
+            case "en_US": alert.buttons["Allow While Using App"].tap()
+            case "ru_BY": alert.buttons["При использовании"].tap()
+            default     : fatalError("Missing current location")
             }
 
             return true
         }
+        app.tap()
     }
     
     private func checkDevice() {
-        let deviceInfo = ["os": UIDevice.current.systemName,
-                          "version": UIDevice.current.systemVersion,
-                          "model": UIDevice.current.name,
-                          "uuid": UIDevice.current.identifierForVendor!.uuidString]
+        let deviceInfo = ["os"      : UIDevice.current.systemName,
+                          "version" : UIDevice.current.systemVersion,
+                          "model"   : UIDevice.current.name,
+                          "uuid"    : UIDevice.current.identifierForVendor!.uuidString]
         
         guard deviceInfo["model"] == "iPhone 8" else {
             fatalError("Select simulator iPhone 8 to take the UI test")
