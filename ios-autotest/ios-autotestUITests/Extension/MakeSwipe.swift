@@ -10,32 +10,28 @@ import XCTest
 
 extension XCUIElement {
     enum Direction {
-        case Up, Down, Left, Right
+        case up, down, left, right
     }
-
-    func makeSwipe(direction: Direction, adjustment: CGFloat) {
-        let half: CGFloat = 0.5
-        let adjustment: CGFloat = adjustment
-        let pressDuration: TimeInterval = 0.05
-
-        let lessThanHalf = half - adjustment
-        let moreThanHalf = half + adjustment
-
-        let centre = coordinate(withNormalizedOffset: CGVector(dx: half, dy: half))
-        let aboveCentre = coordinate(withNormalizedOffset: CGVector(dx: half, dy: lessThanHalf))
-        let belowCentre = coordinate(withNormalizedOffset: CGVector(dx: half, dy: moreThanHalf))
-        let leftOfCentre = coordinate(withNormalizedOffset: CGVector(dx: lessThanHalf, dy: half))
-        let rightOfCentre = coordinate(withNormalizedOffset: CGVector(dx: moreThanHalf, dy: half))
-
+    
+    func makeSwipe(direction: Direction, regulation: CGFloat) {
+        let half            : CGFloat = 0.5
+        let adjustment      : CGFloat = regulation
+        let duration        : TimeInterval = 0.2
+        
+        let lessThanHalf    = half - adjustment
+        let moreThanHalf    = half + adjustment
+        
+        let center          = coordinate(withNormalizedOffset: CGVector(dx: half, dy: half))
+        let aboveCenter     = coordinate(withNormalizedOffset: CGVector(dx: half, dy: lessThanHalf))
+        let belowCenter     = coordinate(withNormalizedOffset: CGVector(dx: half, dy: moreThanHalf))
+        let leftOfCenter    = coordinate(withNormalizedOffset: CGVector(dx: lessThanHalf, dy: half))
+        let rightOfCenter   = coordinate(withNormalizedOffset: CGVector(dx: moreThanHalf, dy: half))
+        
         switch direction {
-        case .Up:
-            centre.press(forDuration: pressDuration, thenDragTo: aboveCentre)
-        case .Down:
-            centre.press(forDuration: pressDuration, thenDragTo: belowCentre)
-        case .Left:
-            centre.press(forDuration: pressDuration, thenDragTo: leftOfCentre)
-        case .Right:
-            centre.press(forDuration: pressDuration, thenDragTo: rightOfCentre)
+        case .left          : center.press(forDuration: duration, thenDragTo: leftOfCenter)
+        case .right         : center.press(forDuration: duration, thenDragTo: rightOfCenter)
+        case .up            : center.press(forDuration: duration, thenDragTo: aboveCenter)
+        case .down          : center.press(forDuration: duration, thenDragTo: belowCenter)
         }
     }
 }

@@ -84,9 +84,9 @@ class UITestCase: SetupUITest {
     
     func testElementsAreHittableWithSwipe() {
         XCTAssertTrue(app.staticTexts["Утренний рассвет"].isHittable)
-        app.staticTexts["Утренний рассвет"].makeSwipe(direction: .Left, adjustment: 0.8)
+        app.staticTexts["Утренний рассвет"].makeSwipe(direction: .left, regulation: 0.8)
         XCTAssertTrue(app.staticTexts["Вечерний закат"].isHittable)
-        app.staticTexts["Вечерний закат"].makeSwipe(direction: .Left, adjustment: 0.8)
+        app.staticTexts["Вечерний закат"].makeSwipe(direction: .left, regulation: 0.8)
         XCTAssertTrue(app.staticTexts["Дивный день"].isHittable)
     }
 }
