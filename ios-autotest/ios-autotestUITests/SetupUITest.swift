@@ -13,12 +13,22 @@ class SetupUITest: XCTestCase {
     let app = XCUIApplication()
 
     override func setUp() {
+        // This method is called before the invocation of each test method in the class.
         continueAfterFailure = false
+        
         app.launchArguments.append("UITesting")
+        
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run.
         XCUIDevice.shared.orientation = .portrait
+        
         app.launch()
+        
         checkDevice()
         checkAlertInterruption()
+    }
+    
+    override func tearDown() {
+        // This method is called after the invocation of each test method in the class.
     }
 
     private func checkAlertInterruption() {
